@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Bernold Autopart'),
+      appBar: CustomAppBar(title: 'Bernold Autoparts'),
       bottomNavigationBar: CustomNavbar(),
       body: Column(
         children: [
