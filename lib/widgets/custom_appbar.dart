@@ -18,7 +18,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           Align(
             alignment: Alignment.center,
             child: Container(
-              color: Colors.black,
+              // color: Colors.black,
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
                 vertical: 10,
@@ -28,7 +28,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 style: Theme.of(context)
                     .textTheme
                     .headline2!
-                    .copyWith(color: Colors.white),
+                    .copyWith(color: Colors.black),
               ),
             ),
           ),
