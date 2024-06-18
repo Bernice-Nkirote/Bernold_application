@@ -58,7 +58,7 @@ class ProductScreen extends StatelessWidget {
                 ),
                 onPressed: () {},
                 child: Text("ADD TO CART",
-                    style: Theme.of(context).textTheme.headline3!),
+                    style: Theme.of(context).textTheme.displaySmall!),
               ),
             ],
           ),
@@ -103,14 +103,14 @@ class ProductScreen extends StatelessWidget {
                         product.name,
                         style: Theme.of(context)
                             .textTheme
-                            .headline5!
+                            .headlineSmall!
                             .copyWith(color: Colors.white),
                       ),
                       Text(
                         '${product.price}',
                         style: Theme.of(context)
                             .textTheme
-                            .headline5!
+                            .headlineSmall!
                             .copyWith(color: Colors.white),
                       ),
                     ],
@@ -124,12 +124,12 @@ class ProductScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: ExpansionTile(
               title: Text('Product Information',
-                  style: Theme.of(context).textTheme.headline3),
+                  style: Theme.of(context).textTheme.displaySmall),
               children: [
                 ListTile(
                   title: Text(
                       'This is a product that can make your life easier and keep your vehicle running for longer.',
-                      style: Theme.of(context).textTheme.bodyText1),
+                      style: Theme.of(context).textTheme.bodyLarge),
                 ),
               ]),
         ),
@@ -137,12 +137,12 @@ class ProductScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: ExpansionTile(
               title: Text('Delivery Information',
-                  style: Theme.of(context).textTheme.headline3),
+                  style: Theme.of(context).textTheme.displaySmall),
               children: [
                 ListTile(
                   title: Text(
                       'This is a product that can make your life easier and keep your vehicle running for longer.',
-                      style: Theme.of(context).textTheme.bodyText1),
+                      style: Theme.of(context).textTheme.bodyLarge),
                 ),
               ]),
         )

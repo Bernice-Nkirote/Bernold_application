@@ -29,7 +29,7 @@ class CartScreen extends StatelessWidget {
                     shape: RoundedRectangleBorder()),
                 onPressed: () {},
                 child: Text("GO TO CHECKOUT",
-                    style: Theme.of(context).textTheme.headline3!),
+                    style: Theme.of(context).textTheme.displaySmall!),
               ),
             ],
           ),
@@ -47,7 +47,7 @@ class CartScreen extends StatelessWidget {
                   children: [
                     Text(
                       'Purchase goods worth \Kes5,000.00 for FREE Delivery',
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -60,7 +60,7 @@ class CartScreen extends StatelessWidget {
                       ),
                       child: Text(
                         "Add More Items",
-                        style: Theme.of(context).textTheme.headline5!.copyWith(
+                        style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                               color: Colors.white,
                             ),
                       ),
@@ -88,10 +88,10 @@ class CartScreen extends StatelessWidget {
                         children: [
                           Text(
                             'SUBTOTAL',
-                            style: Theme.of(context).textTheme.headline5,
+                            style: Theme.of(context).textTheme.headlineSmall,
                           ),
                           Text('\Kes400.00',
-                              style: Theme.of(context).textTheme.headline5),
+                              style: Theme.of(context).textTheme.headlineSmall),
                         ],
                       ),
                       SizedBox(height: 10),
@@ -100,10 +100,10 @@ class CartScreen extends StatelessWidget {
                         children: [
                           Text(
                             'DELIVERY FEE',
-                            style: Theme.of(context).textTheme.headline5,
+                            style: Theme.of(context).textTheme.headlineSmall,
                           ),
                           Text('\Kes200.00',
-                              style: Theme.of(context).textTheme.headline5),
+                              style: Theme.of(context).textTheme.headlineSmall),
                         ],
                       )
                     ],
@@ -133,13 +133,13 @@ class CartScreen extends StatelessWidget {
                               'TOTAL',
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline5!
+                                  .headlineSmall!
                                   .copyWith(color: Colors.white),
                             ),
                             Text('\Kes500.00',
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline5!
+                                    .headlineSmall!
                                     .copyWith(color: Colors.white)),
                           ],
                         ),

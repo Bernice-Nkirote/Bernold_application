@@ -28,11 +28,11 @@ class CartProductCard extends StatelessWidget {
             children: [
               Text(
                 product.name,
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
               Text(
                 '\Kes${product.price}',
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
             ],
           ),
@@ -43,7 +43,7 @@ class CartProductCard extends StatelessWidget {
             IconButton(icon: Icon(Icons.remove_circle), onPressed: () {}),
             Text(
               '1',
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
             IconButton(icon: Icon(Icons.add_circle), onPressed: () {}),
           ],
