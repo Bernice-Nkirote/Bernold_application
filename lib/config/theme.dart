@@ -9,44 +9,44 @@ ThemeData theme() {
 }
 
 TextTheme textTheme() {
-  return TextTheme(
-    headline1: TextStyle(
+  return const TextTheme(
+    displayLarge:TextStyle(
       fontFamily: 'Anonymous Pro',
       color: Color(0xFF000000),
       fontSize: 32,
       fontWeight: FontWeight.bold,
     ),
-    headline2: TextStyle(
+    displayMedium: TextStyle(
       fontFamily: 'Anonymous Pro',
       color: Color(0xFF000000),
       fontSize: 24,
       fontWeight: FontWeight.bold,
     ),
-    headline3: TextStyle(
+    displaySmall: TextStyle(
       fontFamily: 'Anonymous Pro',
       color: Color(0xFF000000),
       fontSize: 18,
       fontWeight: FontWeight.bold,
     ),
-    headline4: TextStyle(
+    headlineMedium: TextStyle(
       fontFamily: 'Anonymous Pro',
       color: Color(0xFF000000),
       fontSize: 16,
       fontWeight: FontWeight.bold,
     ),
-    headline5: TextStyle(
+    headlineSmall: TextStyle(
       fontFamily: 'Anonymous Pro',
       color: Color(0xFF000000),
       fontSize: 14,
       fontWeight: FontWeight.bold,
     ),
-    bodyText1: TextStyle(
+    bodyLarge: TextStyle(
       fontFamily: 'Anonymous Pro',
       color: Color(0xFF000000),
       fontSize: 12,
       fontWeight: FontWeight.normal,
     ),
-    bodyText2: TextStyle(
+    bodyMedium: TextStyle(
       fontFamily: 'Anonymous Pro',
       color: Color(0xFF000000),
       fontSize: 10,
