@@ -3,7 +3,7 @@ import 'package:bernold_application/widgets/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../blocs/wishlist/wishlist_bloc.dart';
-import '../../models/product_model.dart';
+
 
 // created the Homescreen class
 class WishlistScreen extends StatelessWidget {
