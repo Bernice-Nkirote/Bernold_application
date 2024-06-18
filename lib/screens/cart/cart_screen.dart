@@ -38,110 +38,112 @@ class CartScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Purchase goods worth \Kes5,000.00 for FREE Delivery',
-                      style: Theme.of(context).textTheme.headline5,
-                    ),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/');
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black,
-                        shape: RoundedRectangleBorder(),
-                        elevation: 0,
-                      ),
-                      child: Text(
-                        "Add More Items",
-                        style: Theme.of(context).textTheme.headline5!.copyWith(
-                              color: Colors.white,
-                            ),
-                      ),
-                    )
-                  ],
+                Expanded(
+                  child: Text(
+                    Cart().freeDeliveryString,
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
                 ),
-                SizedBox(height: 10),
-                CartProductCard(product: Product.products[0]),
-                CartProductCard(product: Product.products[2]),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    shape: RoundedRectangleBorder(),
+                    elevation: 0,
+                  ),
+                  child: Text(
+                    "Add More Items",
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                          color: Colors.white,
+                        ),
+                  ),
+                ),
               ],
             ),
-
-            // bottom part of screen
-            Column(
-              children: [
-                // create Divider to divide the items to subtotal
-                Divider(thickness: 2),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-                  child: Column(
+            SizedBox(height: 10),
+            Expanded(
+              child: ListView.builder(
+                itemCount: Cart().products.length,
+                itemBuilder: (context, index) {
+                  return CartProductCard(product: Cart().products[index]);
+                },
+              ),
+            ),
+            Divider(thickness: 2),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'SUBTOTAL',
-                            style: Theme.of(context).textTheme.headline5,
-                          ),
-                          Text('\Kes400.00',
-                              style: Theme.of(context).textTheme.headline5),
-                        ],
+                      Text(
+                        'SUBTOTAL',
+                        style: Theme.of(context).textTheme.headlineSmall,
                       ),
-                      SizedBox(height: 10),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'DELIVERY FEE',
-                            style: Theme.of(context).textTheme.headline5,
-                          ),
-                          Text('\Kes200.00',
-                              style: Theme.of(context).textTheme.headline5),
-                        ],
-                      )
+                      Text(
+                        '\Kes${Cart().subtotalString}',
+                        style: Theme.of(context).textTheme.headlineSmall,
+                      ),
                     ],
                   ),
-                ),
-                Stack(children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.black.withAlpha(50),
-                    ),
-                  ),
-                  Container(
-                      width: MediaQuery.of(context).size.width,
-                      margin: const EdgeInsets.all(5.0),
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: Colors.black,
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'DELIVERY FEE',
+                        style: Theme.of(context).textTheme.headlineSmall,
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 30),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'TOTAL',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headline5!
-                                  .copyWith(color: Colors.white),
-                            ),
-                            Text('\Kes500.00',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headline5!
-                                    .copyWith(color: Colors.white)),
-                          ],
+                      Text(
+                        '\Kes${Cart().deliveryFeeString}',
+                        style: Theme.of(context).textTheme.headlineSmall,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Stack(
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    color: Colors.black.withAlpha(50),
+                  ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  margin: const EdgeInsets.all(5.0),
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'TOTAL',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall!
+                              .copyWith(color: Colors.white),
+                        ),
+                        Text(
+                          '\Kes${Cart().totalString}',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall!
+                              .copyWith(color: Colors.white),
                         ),
                       ],
                     ),
