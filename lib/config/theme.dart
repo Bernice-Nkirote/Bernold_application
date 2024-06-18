@@ -10,7 +10,7 @@ ThemeData theme() {
 
 TextTheme textTheme() {
   return const TextTheme(
-    displayLarge:TextStyle(
+    displayLarge: TextStyle(
       fontFamily: 'Anonymous Pro',
       color: Color(0xFF000000),
       fontSize: 32,
